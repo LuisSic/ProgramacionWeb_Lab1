@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css" type="text/css"/>
+</head>
+<body class="container-fluid">
+    <header class="jumbotron jumbotron-fluid">
+        <h1>Catalogo de Videojuegos</h1>      
+        <p>Agrega tus Viedeojuegos favoritos a tu catalogo y quitalos cuando se te antoje</p>
+    </header>
+
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Agregar Juego al Catalogo</h5>
+                    <p class="card-text">Agrega tus juegos favoritos para poder verlos mas tarde!</p>
+                    <a href="#prueba" class="btn btn-primary" onclick="mostrar(1)">Agregar</a>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="col-sm-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Mostrar Juegos del Catalago</h5>
+                        <p class="card-text">Ver todos los juegos que tienes en tu catalogo!</p>
+                        <a href="#IrMostrar" class="btn btn-primary" onclick="mostrar(4)">Ver Juegos</a>
+                    </div>
+                </div>
+        </div>
+    </div>
+    <form name="AgregarPrueba" id="Agregar" style="display:none" class="mt-5">
+        <div class="form-row">
+          <div class="form-group col-md-4">
+            <label for="inputTitulo">Titulo del Juego</label>
+            <input type="text" class="form-control" id="inputTitulo" placeholder="Titulo">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputPlataformo">Plataforma</label>
+            <input type="text" class="form-control" id="inputPlataforma" placeholder="Plataforma">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputEdicion">Edicion</label>
+            <input type="text" class="form-control" id="inputEdicion" placeholder="Edicion">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputDescripcion">Descripcion</label>
+          <input type="text" class="form-control" id="inputDescripcion" placeholder="Descipcion">
+        </div>
+        <div class="form-row">
+            <div class="form-group col-md-6">
+                <label for="inputDesarrollo">Desarrollado Por</label>
+                <select id="inputDesarrollo" class="form-control">
+                  <option>Electronic Arts</option>
+                  <option>Square Enix</option>
+                  <option>Nintendo</option>
+                  <option>Sony</option>
+                  <option>Capcom</option>
+                  <option>Microsoft Studios</option>
+                </select>
+              </div>
+          <div class="form-group col-md-6">
+            <label for="inputClasificacion">Clasificacion</label>
+            <select id="inputClasificacion" class="form-control">
+              <option>Todos</option>
+              <option>Todos +10</option>
+              <option>Adolecentes</option>
+              <option>Maduro</option>
+              <option>Adulto Unicamente</option>
+              <option>Clasificacion Pendiente</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="agregar()">Guardar</button>
+        <a name="prueba"></a>  
+    </form>
+    <form id="Mostrar" style="display:none" class="mt-5">
+        <div class="form-group">
+            <label for="exampleFormControlSelect2">Juegos de tu Catalogo</label>
+            <select multiple class="form-control" id="exampleFormControlSelect2">
+                <option>Halo 5</option>
+                <option>Call Of Duty</option>
+                <option>Battlefield 1</option>
+                <option>Star Wars Battlefront 2</option>
+                <option>FIFA 18</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary" onclick="borrar()">Eliminar</button>
+        <button type="submit" class="btn btn-primary" onclick="actualizar()">Editar</button>
+        <a name="IrMostrar"></a>  
+    </form>
+   
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted">Creado por Luis Sic para Programación Web</p>
+        </div>
+    </footer>
+
+    <script src="vanillaJS.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
